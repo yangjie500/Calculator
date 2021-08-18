@@ -1,0 +1,68 @@
+:root {
+    --bg-color : #fff;
+    --margin-line-color: hsl(6, 78%, 66%);
+    --ruling-line-color: #85c1e9;
+    box-sizing: border-box;
+    font-size: calc(1vw + 0.1em);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+}
+
+.ruled-paper__header {
+    height: 12%;
+    border-bottom: 5px solid var(--ruling-line-color);
+    background-image: -webkit-repeating-linear-gradient(0deg, var(--bg-color) 0% 9%, var(--margin-line-color) 9% 9.2%, transparent 9.2% 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.empty {
+    width: 9.2%;
+    color: red;
+    text-align: center;
+}
+.name,.course-name,.date  {
+    font-size: 2em;
+    padding: 0.5em;
+}
+.ruled-paper__body {
+    height: 88%;
+    background-image: -webkit-repeating-linear-gradient(270deg, var(--bg-color) 0px 30px, var(--ruling-line-color) 31px 33px)
+}
+
+.ruled-paper__margin {
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 9.2%;
+    background-image: -webkit-repeating-linear-gradient(0deg, transparent 0% 97%, var(--margin-line-color) 97% 100%);
+    
+}
+
+.ruled-paper__margin::before {
+    position: absolute;
+    background-color: rgb(223, 223, 223);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 7px solid black;
+    top: 60%;
+    left: 36%;
+    content: "";
+
+}
+
+
