@@ -65,4 +65,142 @@ body {
 
 }
 
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(20%, -50%)
+                rotateZ(45deg);
+}
+
+.pencil {
+    box-sizing: content-box;
+    background-color: #ffc334;
+    height: 1.4em;
+    width: 40em;
+    border-top: 0.7em solid #ffd269;
+    border-bottom: 0.7em solid #e2af38;
+}
+
+.pencil > p {
+    margin: 5px auto 5px auto;
+    width: 10em;
+    color: #ce9f32
+}
+
+.pencil::before {
+    content: "";
+    position: absolute;
+    border-width: 1.4em 4.0em 1.4em 0.1em;
+    border-style: solid;
+    border-color: transparent #e29663 transparent transparent;
+    left: -10%;
+    top: -0.8%;
+}
+
+.pencil::after {
+    content: "";
+    position: absolute;
+    border-width: 0.4em 1.0em 0.4em 0.1em;
+    border-style: solid;
+    border-color: transparent #262626 transparent transparent;
+    left: -10.2%;
+    top: 35%;
+}
+
+.top {
+    position: absolute;
+    box-sizing: content-box;
+    background-color: #acaba7fd;
+    height: 1.4em;
+    width: 6em;
+    right: 0%;
+    top: 1%;
+    border-top: 0.7em solid rgb(201, 199, 199);
+    border-bottom: 0.7em solid rgb(83, 83, 83);
+}
+
+.top::after {
+    content: "";
+    position: absolute;
+    height: 1.4em;
+    width: 4.5em;
+    right: 0%;
+    top: -50%;
+    background-color: hsl(0, 53%, 60%);
+    border-top: 0.7em solid hsl(6, 100%, 77%);
+    border-bottom: 0.7em solid hsl(6, 39%, 44%);
+}
+
+.eraser-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(200%, 200%);
+}
+
+.eraser {
+    width: 12em;
+    height: 5em;
+    background-color: rgb(158, 157, 157);
+    border-top: 0.5em solid rgb(179, 177, 177);
+}
+
+.eraser > img {
+    position: absolute;
+    top: -7%;
+    margin-left: 3.2em;
+    height: 3em;
+    width: 3em;
+}
+.eraser-brand {
+    width: 10em;
+    margin: 0 0.5em 1em auto;
+    font-size: 0.5em;
+}
+
+.eraser-brand > span {
+    font-size: 1rem;
+}
+
+.red {
+    background-color: rgb(226, 102, 102);
+    color: white;
+    width: 5em;
+    margin: 0.2em auto 0 auto;
+    text-align: center;
+    border-radius: 50px 50px;
+}
+
+.red::after {
+    position: absolute;
+    text-indent: 1em;
+    overflow: hidden;
+    content: "18 17 81";
+    color: black;
+    font-size: 0.8em;
+    width: 5em;
+    margin-top: 0.1em;
+}
+
+.eraser::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 0;
+    width: 3em;
+    height: 5em;
+    background-color: rgb(95, 94, 94);
+    border-top: 0.5em solid rgb(121, 119, 119);
+}
+
+.word {
+    margin-top: 0.3em;
+    margin-bottom: 0;
+    font-size: .6em;
+    margin-left: auto;
+    margin-right: 0.5em;
+    width: 13em;
+    text-align: center;
+}
 
